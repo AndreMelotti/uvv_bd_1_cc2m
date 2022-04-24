@@ -8,11 +8,8 @@
  
  # Competências 
  
- --> PostegreSQL;
- 
- --> MariaDB ;
- 
- --> Power Architect;
- 
- --> Git & GitHub;
+ * PostegreSQL;
+ * MariaDB ;
+ * Power Architect;
+ * Git & GitHub.
  
