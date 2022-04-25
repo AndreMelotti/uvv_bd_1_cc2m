@@ -1,8 +1,12 @@
---Criando um usuario novo
+-- Criar um novo usuário com SENHA '123456' para que fique como administrador do banco de dados
 
-create user andre password null;
+CREATE ROLE andre WITH
+	CREATEDB
+	INHERIT
+	LOGIN
+	PASSWORD '12345';
 
---Criando um banco de Dados
+-- Criando o Banco de Dados uvv
 
 create database uvv
 owner andre
@@ -18,8 +22,8 @@ allow_connections true;
 
 -- Criando o Schema uvv.elmasri
 
-create schema elmasri
-authorization andre;
+create schema elmasri AUTHORIZATION andre;
+SET SEARCH_PATH TO elmasri, andre, public;
 
 -- Criando as Tabelas
 -- Criando a Tabla funcionario
@@ -215,15 +219,16 @@ NOT DEFERRABLE;
 
 -- Inserindo na tabela funcioraio
 
-insert into funcionario(primeiro_nome, nome_meio, ultimo_nome, cpf, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
-values ('João', 'B', 'Silva', '12345678966', '1965-01-09','Rua das Flores, 751, São Paulo, SP', 'M', 30000, '33344555587', 5 ),
-('Fernando', 'T', 'Wong', '33344555587', '1955-12-08', 'Rua da Lapa, 34, São Paulo, SP', 'M', 40000, '88866555576', 5),
-('Alice', 'J', 'Zelaya', '99988777767', '1968-01-19', 'Rua Souza Lima, 35, Curitiba, PR', 'F', 25000, '98765432168', 4),
-('Jennifer', 'S', 'Souza', '98765432168', '1941-06-20', 'Av. Arthur de Lima, 54, Santo André, SP', 'F', 43000, '88866555576', 4 ),
-('Ronaldo', 'K', 'Lima', '66688444476','1962-09-15', 'Rua Rebouças, 65, Piracicaba, SP', 'M', 38000,'33344555587', 5),
-('Joice', 'A', 'Leite', '45345345376', '1972-07-31', 'AV. Lucas Obes, 74, São Paulo, SP', 'F', 25000, '33344555587', 5),
-('André', 'V', 'Pereira', '98798798733', '1969-03-29', 'Rua Timbira, 35, São Paulo, SP', 'M', 25000, '98765432168', 4),
-('Jorge', 'E', 'Brito', '88866555576', '1937-11-10', 'Rua do Horto, 35, São Paulo, SP', 'M', 55000, null, 1); -- cpf_supervisor é nulo, pois o gerente não possui um supervisor
+INSERT INTO elmasri.funcionario (primeiro_nome, nome_meio, ultimo_nome, cpf, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento) 
+	VALUES 
+	('Jorge', 'E', 'Brito', '88866555576', '1937-11-10', 'Rua do Horto,35,São Paulo,SP', 'M', 55000, null, 1), -- cpf_supervisor é nulo, pois o gerente não possui um supervisor
+	('Fernando', 'T', 'Wong', '33344555587', '1955-12-08', 'Rua da Lapa,34,São Paulo,SP', 'M', 40000, '88866555576', 5),
+	('João', 'B', 'Silva', '12345678966', '1965-01-09', 'Rua das Flores, 751, São Paulo,SP', 'M', 30000, '33344555587', 5),
+	('Jennifer', 'S', 'Souza', '98765432168', '1941-06-20', 'Av. Arthur de Lima,54,SantoAndré,SP', 'F', 43000, '88866555576', 4),
+	('Ronaldo', 'K', 'Lima', '66688444476', '1962-09-15', 'Rua Rebouças,65,Piracicaba,SP', 'M', 38000, '33344555587', 5),
+	('Joice', 'A', 'Leite', '45345345376', '1972-07-31', 'Av. Lucas Obes,74,São Paulo,SP', 'F', 25000, '33344555587', 5),
+	('André', 'V', 'Pereira', '98798798733', '1969-03-29', 'Rua Timbira,35,São Paulo,SP', 'M', 25000, '98765432168', 4),
+	('Alice', 'J', 'Zelaya', '99988777767', '1968-01-19', 'Rua Souza Lima,35,Curitiba,PR', 'F', 25000, '98765432168', 4); 
 
 -- Inserindo na Tabela departamento
 
