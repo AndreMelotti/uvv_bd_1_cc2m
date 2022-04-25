@@ -1,6 +1,6 @@
 -- Criando o Usuario
 
-CREATE user 'andre'@'localhost';
+CREATE user 'andre'@'localhost' IDENTIFIED BY '12345';;
 
 
 -- Seleciono o Usurio Criado
