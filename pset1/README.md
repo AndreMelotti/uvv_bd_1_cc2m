@@ -43,6 +43,15 @@ Para finalizar, inserimos os dados em cada tabela. É preciso lembrar que:
 * Na tabela funcionário o primeiro funcionario tem que ser o gerente, pois ele possui cpf_supervisor com NULL, porque um valor de FK não pode ser criado antes que ele já exista como PK.
 
 # 4. MariaDB
+Depois de implementar no PostgreSQL, vamos para a ultima implemenação que é no MaraDB ( após a primeira, essa segunda se tornou muito mais facil).
+Utilizando novamente o Power Architect, geramos o código do MySQL a partir do modelo lógico (igual feito anteriormente). 
+
+O comando para INSERT dos dados serão exatamente os mesmos usados anteriormente.
+
+Igualmente, a primeira coisa a ser fazer é criar um usuário e senha (andre e '12345'), usando *CREATE USER* e em seguida criar o banco de dados/esquema(que no MariaDB, são a mesma coisa quase) com codificação UTF-8. Pra finalizar este parte, dê as permissões de modificação do banco de dados uvv para o usuário criado.
+
+Após isso é só repetir o processo feito no Tópico 3, e innserir as tabelas pelo arquivo gerado pelo Power Architect.  Um erro vizualissado é que os comandos para adicionar comentários no MariaDB são feitos por meio de um <ALTER TABLE <nome_tabela> MODIFY COLUMN <nome_atributo> COMMENT> mas isso acaba mudando as propriedades das tabelas, entao restrições como NOT NULL tem que ser postas novamente.
+
 
 
 
