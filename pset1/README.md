@@ -12,13 +12,15 @@ implementação das relações do projeto e inserção dos dados em dois SGBD's:
  O software usado para isso foi o SQL Power Architect para ambos os SGBDs.
 
 Inicialmente criei cada tabela uma por uma e inserimos cada atributo com suas  respectivas restrições(como NOT NULL e 
-Primary Key e etc), seu tipo (VARCHAR, CHAR, INTEGER...) e o comentário que será mostrado no banco de dados.
+Primary Key e etc), seu tipo (INTEGER, VARCHAR, DATE...) e o comentário que será mostrado no banco de dados.
 
-Uma vez completado esta parte, é o momento de fazer as relações entre cada tabela: 
-ligar cada FK a sua respectiva PK e e definir seu tipo de relacionamento (1:N, 1:1 ...). 
-Além disso, é preciso categorizar o relacionamento em indentificado, caso a PK seja também uma FK, ou 
-não identificado (não que essa parte faça muita diferença, mas é bom saber e deixar explícito). 
-Também é necessário incluir as chaves únicas (ou chaves alternativas) por meio de um index na tabela.
+Depois de feito isso, comecei a criar as relaçoes entre as tabelas como: 
+ligar cada FK a sua respectiva PK e e definir seu tipo de relacionamento, alem de incluir as Chaves unicas( As "AK")
+por meio de um index na tabela.
 
 Por fim, é importante fazer uma revisão geral para identificar possíveis problemas no projeto. 
-Este modelo gerará os códigos de SQL com todos as formatações (com alguns poucos desajustes que serão corrigidos posteriormente).
+Este modelo gerará os códigos de SQL com todos as formatações.
+
+# PostgreSQL
+O projeto foi feito para ser implementado em 2 SGBDs e um deles foi o PostgreSQL. Foi pedido que criassemos 
+um script.sql e nele fossem postos todos os
