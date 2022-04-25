@@ -20,7 +20,7 @@ allow_connections true;
 
 \connect uvv;
 
--- Criando o Schema uvv.elmasri
+-- Criando o Schema uvv.elmasri e o deixando como padrão
 
 create schema elmasri AUTHORIZATION andre;
 SET SEARCH_PATH TO elmasri, andre, public;
