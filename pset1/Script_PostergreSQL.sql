@@ -51,6 +51,13 @@ CREATE TABLE elmasri.funcionario (
                 CONSTRAINT pk_funcionario PRIMARY KEY (cpf)
 );
 
+-- Constraints adicionais para a tabela funcionário:
+ALTER TABLE funcionario ADD CONSTRAINT ck_func_sexo 
+CHECK (sexo IN ('M', 'F'));
+
+ALTER TABLE funcionario ADD CONSTRAINT ck_func_salario
+CHECK (salario >= 0);
+
 -- Comentario da Tabela funcionario
 
 COMMENT ON TABLE elmasri.funcionario 				IS 'Tabela que armazena as informações dos funcionários.';
@@ -73,6 +80,11 @@ CREATE TABLE elmasri.departamento (
                 data_inicio_gerente DATE,
                 CONSTRAINT pk_departamento PRIMARY KEY (cpf_funcionario, numero_departamento)
 );
+
+-- Constraints adicionais para a tabela departamento:
+
+ALTER TABLE departamento ADD CONSTRAINT ck_dept_num_dept
+CHECK (numero_departamento >= 0);
 
 -- Cometarios da Tabela departamento
 
@@ -134,6 +146,12 @@ CREATE TABLE elmasri.trabalha_em (
                 CONSTRAINT pk_trabalha_em PRIMARY KEY (cpf_funcionario, numero_projeto)
 );
 
+-- Constraints adicionais para a tabela trabalha em:
+
+ALTER TABLE trabalha_em ADD CONSTRAINT ck_trab_em_horas
+CHECK (horas >= 0);
+
+
 -- Comentarios da Tabela trabalha_em
 
 COMMENT ON TABLE elmasri.trabalha_em 		      IS 'Tabela para armazenar quais funcionários trabalham em quais projetos.';
@@ -151,6 +169,11 @@ CREATE TABLE elmasri.dependente (
                 parentesco      VARCHAR(15),
                 CONSTRAINT pk_dependente PRIMARY KEY (cpf_funcionario, nome_dependente)
 );
+
+-- Constraints adicionais para a tabela dependente:
+
+ALTER TABLE dependente ADD CONSTRAINT ck_depend_sexo
+CHECK (sexo IN ('M', 'F'));
 
 -- Comenarios da Tabela dependente
 
