@@ -71,7 +71,7 @@ CREATE TABLE elmasri.departamento (
                 nome_departamento 	 VARCHAR(15)    NOT NULL,
                 cpf_gerente		 CHAR(11) 	NOT NULL,
                 data_inicio_gerente DATE,
-                CONSTRAINT pk_departamento PRIMARY KEY (numero_departamento)
+                CONSTRAINT pk_departamento PRIMARY KEY (cpf_funcionario, numero_departamento)
 );
 
 -- Cometarios da Tabela departamento
