@@ -69,7 +69,7 @@ CREATE TABLE departamento (
                 nome_departamento VARCHAR(15) NOT NULL,
                 cpf_gerente CHAR(11) NOT NULL,
                 data_inicio_gerente DATE,
-                PRIMARY KEY (numero_departamento)
+                PRIMARY KEY (cpf_funcionario, numero_departamento)
 );
 
 -- Comentarios da Tabela departamento
