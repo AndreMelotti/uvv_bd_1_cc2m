@@ -109,9 +109,9 @@ CREATE UNIQUE INDEX ak_departamento
 -- Criando Tabela localizacoes_departamento
 
 CREATE TABLE elmasri.localizacoes_departamento (
-                nome_departamento 	INTEGER 	NOT NULL,
+                numero_departamento 	INTEGER 	NOT NULL,
                 local		 	VARCHAR(15)     NOT NULL,
-                CONSTRAINT pk_localizacoes_departamento PRIMARY KEY (nome_departamento, local)
+                CONSTRAINT pk_localizacoes_departamento PRIMARY KEY (numero_departamento, local)
 );
 
 -- Comentarios da Tabela localizacoes_departamento
@@ -238,7 +238,7 @@ NOT 	  DEFERRABLE;
 -- Definindo a Foreign Key(FK) da Tabela localizacoes_departamento
 
 ALTER TABLE elmasri.localizacoes_departamento ADD CONSTRAINT departamento_localizacoes_departamento_fk
-FOREIGN KEY (nome_departamento)
+FOREIGN KEY (numero_departamento)
 REFERENCES elmasri.departamento (numero_departamento)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
@@ -296,7 +296,7 @@ values ('ProdutoX', 1 , 'Santo André', 5),
 
 -- Inserindo na Tabela dependente
 
-insert into dependente (cpf_funcionario, nome_dependete, sexo, data_nascimento, parentesco)
+insert into dependente (cpf_funcionario, nome_dependente, sexo, data_nascimento, parentesco)
 values ('33344555587', 'Alicia', 'F', '05-04-1986', 'Filha'),
 ('33344555587', 'Tiago', 'M', '1983-10-25', 'Filho'),
 ('33344555587', 'Janaina', 'F', '1958-05-03', 'Esposa'),
