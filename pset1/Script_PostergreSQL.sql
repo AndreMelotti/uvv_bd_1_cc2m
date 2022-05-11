@@ -117,7 +117,7 @@ CREATE TABLE elmasri.localizacoes_departamento (
 -- Comentarios da Tabela localizacoes_departamento
 
 COMMENT ON TABLE elmasri.localizacoes_departamento 		      IS 'Tabela que armazena as possíveis localizações dos departamentos.';
-COMMENT ON COLUMN elmasri.localizacoes_departamento.nome_departamento IS 'Número do departamento. Faz parta da PK desta tabela e também é uma FK para a tabela departamento.';
+COMMENT ON COLUMN elmasri.localizacoes_departamento.numero_departamento IS 'Número do departamento. Faz parta da PK desta tabela e também é uma FK para a tabela departamento.';
 COMMENT ON COLUMN elmasri.localizacoes_departamento.local 	      IS 'Localização do departamento. Faz parte da PK desta tabela.';
 
 -- Criando Tabela projeto
