@@ -13,8 +13,11 @@ e foi orientado pelo professor Abrantes Araujo Silva Filho.
 Para a confecção do trabalho, eu utilizei o *Visual Studios* na maquina virtual, para a criação do relatorio.sql . Foi utilizado
 o comando **SELECT-FROM** para a criação dos relatorios. 
 
-Para isso tambem
+Para confecção tambem utilizamos:
 
+1. _WHERE:_ para fazer uma operação de seleção: define a condição para selecionarmos um conjunto de tuplas específicas;
+2. _UNNION:_ junta dados de duas ou mais relações que possuem os mesmos tipos de atributos;
+3. _INNER JOIN:_ cria uma relação a partir da junção de outras, ainda que seus atributos sejam de tipos diferentes; 
 
 ------------
 
@@ -32,9 +35,10 @@ salário atual e o salário reajustado em 20% caso o atual seja inferior à 35 m
 - Questão 5:Relatório com para cada departamento, o nome do gerente e o nome dos funcionários e ordena por nome do departamento (em ordem crescente) 
 e pelo salário dos funcionários (em ordem decrescente);
 
-- Questão 6:
+- Questão 6:Relatório com o nome completo dos funcionários que possuem pelo menos um dependente, o departamento onde trabalham e o 
+nome completo, idade e sexo de todos os dependentes ;
 
-- Questão 7:
+- Questão 7:Relatório que mostre, para cada funcionário que não tem dependente, seu nome completo, departamento e salário.
 
 - Questão 8:
 
