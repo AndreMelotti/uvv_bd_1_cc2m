@@ -40,13 +40,15 @@ nome completo, idade e sexo de todos os dependentes ;
 
 - Questão 7:Relatório que mostre, para cada funcionário que não tem dependente, seu nome completo, departamento e salário.
 
-- Questão 8:
+- Questão 8:Relatório que mostra, para cada departamento, os seus projetos e nome completo de cada funcionário alocado em cada projeto e o número de horas trabalhadas;
 
-- Questão 9:
+- Questão 9:Relatório que mostra a soma total das horas de cada projeto em cada departamento, o nome do departamento e do projeto;
 
-- Questão 10:
+- Questão 10:Relatório que mostra a média salarial dos funcionários de cada departamento;
 
-- Questão 11:
+- Questão 11:que mostre o nome completo do funcionário, o
+nome do projeto e o valor total que o funcionário receberá referente às horas trabalhadas
+naquele projeto.
 
 - Questão 12:
 
