@@ -33,7 +33,7 @@ create schema elmasri AUTHORIZATION andre;
 
 -- Alterar o esquema para padrão.
 
-ALTER USE andre
+ALTER USER andre
 SET SEARCH_PATH TO elmasri, andre, public;
 
 -- Alterando o caminho pra sessão Atual
