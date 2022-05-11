@@ -1,4 +1,10 @@
 -- Pset 2
+/*
+Realizado em conjunto com:
+
+-- Lucas Zanon
+-- Vitor Motta Supelete
+*/
 
 --QUESTÃO 01: 
 
