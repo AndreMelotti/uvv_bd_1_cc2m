@@ -29,8 +29,14 @@ allow_connections true;
 
 -- Criando o Schema uvv.elmasri e o deixando como padrão
 
-create schema elmasri AUTHORIZATION andre
+create schema elmasri AUTHORIZATION andre;
+
+-- Alterar o esquema para padrão.
+
+ALTER USE andre
 SET SEARCH_PATH TO elmasri, andre, public;
+
+-- Alterando o caminho pra sessão Atual
 
 SET SEARCH_PATH TO elmasri, andre, public;
 
