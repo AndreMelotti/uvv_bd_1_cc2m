@@ -46,14 +46,16 @@ nome completo, idade e sexo de todos os dependentes ;
 
 - Questão 10:Relatório que mostra a média salarial dos funcionários de cada departamento;
 
-- Questão 11:que mostre o nome completo do funcionário, o
+- Questão 11:Relatorio que mostre o nome completo do funcionário, o
 nome do projeto e o valor total que o funcionário receberá referente às horas trabalhadas
-naquele projeto.
+naquele projeto( considerando 50 reais a hora);
 
-- Questão 12:
+- Questão 12:Relatorio que mostre o nome do departamento, o nome do projeto e o nome dos funcionários
+que, mesmo estando alocados a algum projeto, não registraram nenhuma hora trabalhada;
 
-- Questão 13:
+- Questão 13:Relatório que exibe a quantidade de funcionários de cada departamento;
 
-- Questão 14:
+- Questão 14:Relatório que exiba quantos funcionários cada departamento tem;
 
-- Questão 15:
+- Questão 15:Relatorio que mostre o nome completo do funcionário, o departamento
+desse funcionário e o nome dos projetos em que cada funcionário está alocado.
